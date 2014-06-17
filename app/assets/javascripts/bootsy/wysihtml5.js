@@ -4052,10 +4052,12 @@ wysihtml5.browser = (function() {
   api.removeClass = function(element, className) {
     var classList = element.classList;
     if (classList) {
-      return classList.remove(className);
+      // return classList.remove(className);
+      return classList;
     }
 
-    element.className = element.className.replace(new RegExp("(^|\\s+)" + className + "(\\s+|$)"), " ");
+    // element.className = element.className.replace(new RegExp("(^|\\s+)" + className + "(\\s+|$)"), " ");
+    element.className;
   };
 
   api.hasClass = function(element, className) {
